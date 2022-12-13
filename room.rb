@@ -24,7 +24,9 @@ class Room
   end
 
   def add_guest(guest)
-    @guest_list.append(guest)
+    if @guest_list.length < @capacity
+      @guest_list.append(guest)
+    end
   end
 
   def remove_guest(guest)
